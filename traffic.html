@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources3/ol.css">
+        <link rel="stylesheet" href="resources3/fontawesome-all.min.css">
+        <link rel="stylesheet" href="./resources3/ol3-layerswitcher.css">
+        <link rel="stylesheet" href="./resources3/qgis2web.css">
+        <link rel="stylesheet" href="styles.css">
+<style>
+.search-layer {
+  top: 65px;
+  left: .5em;
+}
+.ol-touch .search-layer {
+  top: 80px;
+}
+</style>
+        <style>
+        html {
+            background-color: rgb(0, 81, 23);
+        }
+        .ol-control button {
+            background-color: #f8f8f8 !important;
+            color: #000000 !important;
+            border-radius: 0px !important;
+        }
+        .ol-zoom, .geolocate, .gcd-gl-control .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 3px !important;
+        }
+        .ol-scale-line {
+            background: none !important;
+        }
+        .ol-scale-line-inner {
+            border: 2px solid #f8f8f8 !important;
+            border-top: none !important;
+            background: rgba(255, 255, 255, 0.5) !important;
+            color: black !important;
+        }
+        </style>
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title>Dataweek</title>
+    </head>
+    <body onload="autoNotify()">
+        <audio id="notifypop"> <!--Source the audio file. -->
+            <source src="audio/carhorn.mp3" type="audio/mp3">
+        </audio>
+        <div id="header">
+            <h2>Wat heeft invloed op de broedplaats van vogels in Amsterdam?</h2>
+            <a href="index.html"><button>Windmolens</button></a>
+            <a href="dogs.html"><button>Honden uitlaat gebieden</button></a>
+            <a href="hotareas.html"><button>Warmtegebieden</button></a>
+            <a href="traffic.html"><button class="active">Verkeer geluid</button></a>
+        </div>
+        <img src="images/traffic.png" alt="">
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources3/qgis2web_expressions.js"></script>
+        <script src="resources3/polyfills.js"></script>
+        <script src="./resources3/functions.js"></script>
+        <script src="./resources3/ol.js"></script>
+        <script src="./resources3/ol3-layerswitcher.js"></script>
+        <script src="layers3/GELUID_VERKEER_1.js"></script><script src="layers3/VOGELS_2.js"></script>
+        <script src="styles3/GELUID_VERKEER_1_style.js"></script><script src="styles3/VOGELS_2_style.js"></script>
+        <script src="./layers3/layers.js" type="text/javascript"></script> 
+        <script src="./resources3/qgis2web.js"></script>
+        <script src="./resources3/Autolinker.min.js"></script>
+        <script src="/main.js"></script>
+    </body>
+</html>

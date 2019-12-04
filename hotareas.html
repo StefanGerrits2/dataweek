@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link rel="stylesheet" href="./resources/ol3-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <link rel="stylesheet" href="styles.css">
+<style>
+.search-layer {
+  top: 65px;
+  left: .5em;
+}
+.ol-touch .search-layer {
+  top: 80px;
+}
+</style>
+        <style>
+        html {
+            background-color: rgb(0, 81, 23);
+        }
+        .ol-control button {
+            background-color: #f8f8f8 !important;
+            color: #000000 !important;
+            border-radius: 0px !important;
+        }
+        .ol-zoom, .geolocate, .gcd-gl-control .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 3px !important;
+        }
+        .ol-scale-line {
+            background: none !important;
+        }
+        .ol-scale-line-inner {
+            border: 2px solid #f8f8f8 !important;
+            border-top: none !important;
+            background: rgba(255, 255, 255, 0.5) !important;
+            color: black !important;
+        }
+        </style>
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title>Dataweek</title>
+    </head>
+    <body>
+        <div id="header">
+            <h2>Wat heeft invloed op de broedplaats van vogels in Amsterdam?</h2>
+            <a href="index.html"><button>Windmolens</button></a>
+            <a href="dogs.html"><button>Honden uitlaat gebieden</button></a>
+            <a href="hotareas.html"><button class="active">Warmtegebieden</button></a>
+            <a href="traffic.html"><button>Verkeer geluid</button></a>
+        </div>
+        <img src="images/hotareas.png" alt="">
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources4/qgis2web_expressions.js"></script>
+        <script src="resources4/polyfills.js"></script>
+        <script src="./resources4/functions.js"></script>
+        <script src="./resources4/ol.js"></script>
+        <script src="./resources4/ol3-layerswitcher.js"></script>
+        <script src="layers4/STADSWARMTEKOUDE_WIJK_1.js"></script><script src="layers4/VOGELS_2.js"></script>
+        <script src="styles4/STADSWARMTEKOUDE_WIJK_1_style.js"></script><script src="styles4/VOGELS_2_style.js"></script>
+        <script src="./layers4/layers.js" type="text/javascript"></script> 
+        <script src="./resources4/qgis2web.js"></script>
+        <script src="./resources4/Autolinker.min.js"></script>
+        <script src="/main.js"></script> 
+    </body>
+</html>
