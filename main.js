@@ -1,5 +1,3 @@
-console.log('test')
-
 var popupsound = document.getElementById("notifypop");
 
 function autoNotify() {

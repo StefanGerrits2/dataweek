@@ -60,6 +60,15 @@ button:hover {
     top: 1.5em;
     right: 10em;
     height: 7em;
+    z-index: 50;
+}
+
+.tail {
+    position: absolute;
+    top: 2em;
+    right: 8.6em;
+    height: 2.5em;
+    animation: dog-tail 2s infinite;
 }
 
 #carsound {
@@ -112,4 +121,16 @@ button:hover {
 	100% {
 		transform: translatey(10px);
 	}
+}
+
+@keyframes dog-tail {
+    0% {
+      transform: rotate(5deg);
+    }
+    50% {
+      transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
 }
