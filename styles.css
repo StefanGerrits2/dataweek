@@ -1,22 +1,24 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 2em;
+    overflow-y: hidden; 
+    overflow-x: hidden; 
 }
 
 #header {
     text-align: center;
     background-color: rgb(0, 81, 23);
     z-index: 100;
-    color: white
+    color: white;
 }
 
 #foobar { display: none }
 
-img {
+.legend {
     position: absolute;
     width: 18em;
     right: 2em;
-    top: 9.5em;
+    top: 12em;
     z-index: 100;
 }
 
@@ -32,6 +34,7 @@ button {
 	text-decoration: none;
     text-shadow: 0px 1px 0px #2f6627;
     margin-right: 1em;
+    margin-top: 2em;
 }
 
 .active {
@@ -42,4 +45,71 @@ button {
 
 button:hover {
     background-color:#5cc727;
+}
+
+.bird {
+    position: absolute;
+    top: 1.5em;
+    left: 10em;
+    width: 7em;
+    animation: float 8s ease-in-out infinite;
+}
+
+.tinyimg {
+    position: absolute;
+    top: 1.5em;
+    right: 10em;
+    height: 7em;
+}
+
+#carsound {
+    right: 8em;
+}
+
+#windmills {
+    height: 4em;
+    top: 5em;
+}
+
+#draaien1 {
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute; 
+    height: 5em;
+    right: 8em;
+    top: 2.2em;
+}
+
+#draaien2 {
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;  
+    height: 5em;
+    right: 11em;
+    top: 2.6em;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(10px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(10px);
+	}
 }
