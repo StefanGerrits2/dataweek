@@ -13,7 +13,7 @@ function categories_HONDEN_1(feature, value, size, resolution, labelText,
                     break;
 case 'Uitrengebied':
                     return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(255,255,255,0.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0}),fill: new ol.style.Fill({color: 'rgba(17,87,46,1.0)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0}),fill: new ol.style.Fill({color: 'rgba(164,94,61,1.0)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

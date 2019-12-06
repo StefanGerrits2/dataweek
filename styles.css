@@ -52,7 +52,7 @@ button:hover {
     top: 1.5em;
     left: 10em;
     width: 7em;
-    animation: float 8s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
 }
 
 .tinyimg {
@@ -63,16 +63,48 @@ button:hover {
     z-index: 50;
 }
 
+.car {
+    position: absolute;
+    top: 2.5em;
+    height: 5.5em;
+    z-index: 50;
+}
+
+.sounds {
+    position: absolute;
+    height: 5.5em;
+    right: 6em;
+    top: 2em;
+    animation: up-and-down 1500ms alternate infinite ease-in;
+}
+
+.dog {
+    position: absolute;
+    top: 2.5em;
+    right: 10em;
+    height: 6.5em;
+    z-index: 50;
+}
+
 .tail {
     position: absolute;
-    top: 2em;
-    right: 8.6em;
+    top: 1.9em;
+    right: 8.7em;
     height: 2.5em;
     animation: dog-tail 2s infinite;
 }
 
+.doghead {
+    position: absolute;
+    height: 3.5em;
+    right: 13.6em;
+    z-index: 200;
+    top: 0.9em;
+    animation: dog-head 3000ms infinite;
+}
+
 #carsound {
-    right: 8em;
+    right: 11em;
 }
 
 #windmills {
@@ -87,19 +119,21 @@ button:hover {
     animation-timing-function: linear;
     position: absolute; 
     height: 5em;
-    right: 8em;
-    top: 2.2em;
+    right: 7.95em;
+    top: 2.3em;
+    z-index: 300;
 }
 
 #draaien2 {
     animation-name: spin;
-    animation-duration: 10000ms;
+    animation-duration: 8000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     position: absolute;  
     height: 5em;
-    right: 11em;
+    right: 10.9em;
     top: 2.6em;
+    z-index: 300;
 }
 
 @keyframes spin {
@@ -134,3 +168,20 @@ button:hover {
         transform: rotate(5deg);
     }
 }
+
+@keyframes dog-head {
+    0% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes up-and-down {
+    0%   {transform: scale(.8);}
+    100% {transform: scale(1.3);}
+  }
